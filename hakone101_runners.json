@@ -1,0 +1,947 @@
+[
+  {
+    "university": "青山学院大学",
+    "runners": [
+      {
+        "runner_name": "宇田川瞬矢",
+        "record": "1時間02分51秒"
+      },
+      {
+        "runner_name": "黒田朝日",
+        "record": "1時間05分44秒"
+      },
+      {
+        "runner_name": "鶴川正也",
+        "record": "1時間01分51秒"
+      },
+      {
+        "runner_name": "太田蒼生",
+        "record": "1時間00分24秒"
+      },
+      {
+        "runner_name": "若林宏樹",
+        "record": "1時間09分11秒"
+      },
+      {
+        "runner_name": "野村昭夢",
+        "record": "56分47秒"
+      },
+      {
+        "runner_name": "白石光星",
+        "record": "1時間03分10秒"
+      },
+      {
+        "runner_name": "塩出朔太",
+        "record": "1時間04分14秒"
+      },
+      {
+        "runner_name": "田中悠登",
+        "record": "1時間08分40秒"
+      },
+      {
+        "runner_name": "小河原陽琉",
+        "record": "1時間08分27秒"
+      }
+    ]
+  },
+  {
+    "university": "中央大学",
+    "runners": [
+      {
+        "runner_name": "吉居駿恭",
+        "record": "1時間01分07秒"
+      },
+      {
+        "runner_name": "溜池一大",
+        "record": "1時間06分39秒"
+      },
+      {
+        "runner_name": "本間親",
+        "record": "1時間00分16秒"
+      },
+      {
+        "runner_name": "白川陽大",
+        "record": "1時間02分03秒"
+      },
+      {
+        "runner_name": "園木大斗",
+        "record": "1時間11分43秒"
+      },
+      {
+        "runner_name": "浦田優斗",
+        "record": "58分49秒"
+      },
+      {
+        "runner_name": "岡田開成",
+        "record": "1時間03分07秒"
+      },
+      {
+        "runner_name": "佐藤大介",
+        "record": "1時間09分51秒"
+      },
+      {
+        "runner_name": "吉中祐太",
+        "record": "1時間09分46秒"
+      },
+      {
+        "runner_name": "藤田大智",
+        "record": "1時間09分28秒"
+      }
+    ]
+  },
+  {
+    "university": "駒澤大学",
+    "runners": [
+      {
+        "runner_name": "帰山佑大",
+        "record": "1時間02分39秒"
+      },
+      {
+        "runner_name": "篠原倖太朗",
+        "record": "1時間06分14秒"
+      },
+      {
+        "runner_name": "谷中晴",
+        "record": "1時間02分05秒"
+      },
+      {
+        "runner_name": "桑田駿介",
+        "record": "1時間01分24秒"
+      },
+      {
+        "runner_name": "山川拓馬",
+        "record": "1時間10分55秒"
+      },
+      {
+        "runner_name": "伊藤蒼唯",
+        "record": "57分38秒"
+      },
+      {
+        "runner_name": "佐藤圭汰",
+        "record": "1時間00分43秒"
+      },
+      {
+        "runner_name": "安原海晴",
+        "record": "1時間04分31秒"
+      },
+      {
+        "runner_name": "村上響",
+        "record": "1時間09分04秒"
+      },
+      {
+        "runner_name": "小山期也",
+        "record": "1時間08分54秒"
+      }
+    ]
+  },
+  {
+    "university": "創価大学",
+    "runners": [
+      {
+        "runner_name": "容藤大空",
+        "record": "1時間03分02秒"
+      },
+      {
+        "runner_name": "吉田響",
+        "record": "1時間05分43秒"
+      },
+      {
+        "runner_name": "ムチーニ",
+        "record": "1時間00分51秒"
+      },
+      {
+        "runner_name": "野沢悠真",
+        "record": "1時間01分44秒"
+      },
+      {
+        "runner_name": "山口報輝",
+        "record": "1時間12分18秒"
+      },
+      {
+        "runner_name": "川上朔太",
+        "record": "59分33秒"
+      },
+      {
+        "runner_name": "織橋巧",
+        "record": "1時間03分09秒"
+      },
+      {
+        "runner_name": "石丸修那",
+        "record": "1時間05分54秒"
+      },
+      {
+        "runner_name": "吉田凌",
+        "record": "1時間10分20秒"
+      },
+      {
+        "runner_name": "小池荊希",
+        "record": "1時間11分01秒"
+      }
+    ]
+  },
+  {
+    "university": "城西大学",
+    "runners": [
+      {
+        "runner_name": "久保出雄大",
+        "record": "1時間02分51秒"
+      },
+      {
+        "runner_name": "キムタイ",
+        "record": "1時間06分55秒"
+      },
+      {
+        "runner_name": "平林樹",
+        "record": "1時間02分28秒"
+      },
+      {
+        "runner_name": "林晃耀",
+        "record": "1時間02分54秒"
+      },
+      {
+        "runner_name": "斎藤将也",
+        "record": "1時間10分50秒"
+      },
+      {
+        "runner_name": "小林竜輝",
+        "record": "58分06秒"
+      },
+      {
+        "runner_name": "三宅駿",
+        "record": "1時間04分29秒"
+      },
+      {
+        "runner_name": "岩田真之",
+        "record": "1時間06分21秒"
+      },
+      {
+        "runner_name": "桜井優我",
+        "record": "1時間08分27秒"
+      },
+      {
+        "runner_name": "中島巨朔",
+        "record": "1時間09分48秒"
+      }
+    ]
+  },
+  {
+    "university": "立教大学",
+    "runners": [
+      {
+        "runner_name": "吉屋佑最",
+        "record": "1時間02分56秒"
+      },
+      {
+        "runner_name": "馬場賢人",
+        "record": "1時間06分32秒"
+      },
+      {
+        "runner_name": "稲塚大祐",
+        "record": "1時間03分21秒"
+      },
+      {
+        "runner_name": "林虎大朗",
+        "record": "1時間03分09秒"
+      },
+      {
+        "runner_name": "山本羅生",
+        "record": "1時間11分29秒"
+      },
+      {
+        "runner_name": "原田楓大",
+        "record": "59分19秒"
+      },
+      {
+        "runner_name": "小倉史也",
+        "record": "1時間04分54秒"
+      },
+      {
+        "runner_name": "山口史朗",
+        "record": "1時間04分41秒"
+      },
+      {
+        "runner_name": "安藤圭佑",
+        "record": "1時間10分06秒"
+      },
+      {
+        "runner_name": "永井駿",
+        "record": "1時間11分54秒"
+      }
+    ]
+  },
+  {
+    "university": "東洋大学",
+    "runners": [
+      {
+        "runner_name": "小林亮大",
+        "record": "1時間02分52秒"
+      },
+      {
+        "runner_name": "緒方露那斗",
+        "record": "1時間08分50秒"
+      },
+      {
+        "runner_name": "迎暖人",
+        "record": "1時間02分40秒"
+      },
+      {
+        "runner_name": "岸本遼太郎",
+        "record": "1時間01分15秒"
+      },
+      {
+        "runner_name": "宮崎優",
+        "record": "1時間12分16秒"
+      },
+      {
+        "runner_name": "西村真周",
+        "record": "58分56秒"
+      },
+      {
+        "runner_name": "内堀勇",
+        "record": "1時間04分16秒"
+      },
+      {
+        "runner_name": "網本佳悟",
+        "record": "1時間04分18秒"
+      },
+      {
+        "runner_name": "吉田周",
+        "record": "1時間09分22秒"
+      },
+      {
+        "runner_name": "薄根大河",
+        "record": "1時間10分11秒"
+      }
+    ]
+  },
+  {
+    "university": "日本体育大学",
+    "runners": [
+      {
+        "runner_name": "平島龍斗",
+        "record": "1時間02分40秒"
+      },
+      {
+        "runner_name": "山崎丞",
+        "record": "1時間08分44秒"
+      },
+      {
+        "runner_name": "富永ヰ京大",
+        "record": "1時間02分45秒"
+      },
+      {
+        "runner_name": "田島駿介",
+        "record": "1時間01分35秒"
+      },
+      {
+        "runner_name": "浦上和樹",
+        "record": "1時間12分19秒"
+      },
+      {
+        "runner_name": "石川龍芽",
+        "record": "59分52秒"
+      },
+      {
+        "runner_name": "住原聡大",
+        "record": "1時間02分56秒"
+      },
+      {
+        "runner_name": "分須尊紀",
+        "record": "1時間04分32秒"
+      },
+      {
+        "runner_name": "山口廉",
+        "record": "1時間09分59秒"
+      },
+      {
+        "runner_name": "二村多早大朗",
+        "record": "1時間11分00秒"
+      }
+    ]
+  },
+  {
+    "university": "東京国際大学",
+    "runners": [
+      {
+        "runner_name": "木村海斗",
+        "record": "1時間02分55秒"
+      },
+      {
+        "runner_name": "エテイーリ",
+        "record": "1時間05分31秒"
+      },
+      {
+        "runner_name": "佐藤榛紀",
+        "record": "1時間03分29秒"
+      },
+      {
+        "runner_name": "大林洗己",
+        "record": "1時間02分35秒"
+      },
+      {
+        "runner_name": "楠木悠人",
+        "record": "1時間14分04秒"
+      },
+      {
+        "runner_name": "中山拓真",
+        "record": "59分00秒"
+      },
+      {
+        "runner_name": "冨永昌輝",
+        "record": "1時間02分30秒"
+      },
+      {
+        "runner_name": "益田郁也",
+        "record": "1時間06分12秒"
+      },
+      {
+        "runner_name": "菅野裕二郎",
+        "record": "1時間09分01秒"
+      },
+      {
+        "runner_name": "大村良紀",
+        "record": "1時間09分38秒"
+      }
+    ]
+  },
+  {
+    "university": "中央学院大学",
+    "runners": [
+      {
+        "runner_name": "堀田最礼",
+        "record": "1時間02分53秒"
+      },
+      {
+        "runner_name": "吉田礼志",
+        "record": "1時間06分24秒"
+      },
+      {
+        "runner_name": "市川大世",
+        "record": "1時間04分02秒"
+      },
+      {
+        "runner_name": "太田翻",
+        "record": "1時間03分31秒"
+      },
+      {
+        "runner_name": "柴田大輝",
+        "record": "1時間11分47秒"
+      },
+      {
+        "runner_name": "小松裕大朗",
+        "record": "59分07秒"
+      },
+      {
+        "runner_name": "坂本験",
+        "record": "1時間04分30秒"
+      },
+      {
+        "runner_name": "黒谷優",
+        "record": "1時間05分48秒"
+      },
+      {
+        "runner_name": "長部虎太郎",
+        "record": "1時間11分34秒"
+      },
+      {
+        "runner_name": "近田陽路",
+        "record": "1時間10分37秒"
+      }
+    ]
+  },
+  {
+    "university": "順天堂大学",
+    "runners": [
+      {
+        "runner_name": "浅井賠貴",
+        "record": "1時間02分52秒"
+      },
+      {
+        "runner_name": "玉目陸",
+        "record": "1時間08分22秒"
+      },
+      {
+        "runner_name": "海老津憲伸",
+        "record": "1時間02分46秒"
+      },
+      {
+        "runner_name": "堀越邦人",
+        "record": "1時間01分48秒"
+      },
+      {
+        "runner_name": "川原琉人",
+        "record": "1時間12分52秒"
+      },
+      {
+        "runner_name": "林龍正",
+        "record": "58分55秒"
+      },
+      {
+        "runner_name": "吉岡大潮",
+        "record": "1時間02分21秒"
+      },
+      {
+        "runner_name": "荒牧琢登",
+        "record": "1時間05分14秒"
+      },
+      {
+        "runner_name": "石岡大佑",
+        "record": "1時間09分46秒"
+      },
+      {
+        "runner_name": "古川達也",
+        "record": "1時間10分09秒"
+      }
+    ]
+  },
+  {
+    "university": "帝京大学",
+    "runners": [
+      {
+        "runner_name": "島田晃希",
+        "record": "1時間02分45秒"
+      },
+      {
+        "runner_name": "山中博生",
+        "record": "1時間06分22秒"
+      },
+      {
+        "runner_name": "柴戸遼太",
+        "record": "1時間03分56秒"
+      },
+      {
+        "runner_name": "尾崎仁哉",
+        "record": "1時間03分16秒"
+      },
+      {
+        "runner_name": "楠岡由浩",
+        "record": "1時間13分09秒"
+      },
+      {
+        "runner_name": "鹿田陸",
+        "record": "58分13秒"
+      },
+      {
+        "runner_name": "福田籾",
+        "record": "1時間03分19秒"
+      },
+      {
+        "runner_name": "高島大空",
+        "record": "1時間04分47秒"
+      },
+      {
+        "runner_name": "小林大最",
+        "record": "1時間09分03秒"
+      },
+      {
+        "runner_name": "小林咲冴",
+        "record": "1時間10分08秒"
+      }
+    ]
+  },
+  {
+    "university": "山梨学院大学",
+    "runners": [
+      {
+        "runner_name": "平八重充希",
+        "record": "1時間02分48秒"
+      },
+      {
+        "runner_name": "ムトウク",
+        "record": "1時間06分55秒"
+      },
+      {
+        "runner_name": "村上大樹",
+        "record": "1時間04分20秒"
+      },
+      {
+        "runner_name": "和田瑛登",
+        "record": "1時間04分57秒"
+      },
+      {
+        "runner_name": "弓削征慶",
+        "record": "1時間12分03秒"
+      },
+      {
+        "runner_name": "大西陸",
+        "record": "1時間01分34秒"
+      },
+      {
+        "runner_name": "大杉亮大朗",
+        "record": "1時間04分48秒"
+      },
+      {
+        "runner_name": "阿部紘也",
+        "record": "1時間04分25秒"
+      },
+      {
+        "runner_name": "徳田秋斗",
+        "record": "1時間13分12秒"
+      },
+      {
+        "runner_name": "土器屋快都",
+        "record": "1時間14分38秒"
+      }
+    ]
+  },
+  {
+    "university": "法政大学",
+    "runners": [
+      {
+        "runner_name": "武田和馬",
+        "record": "1時間02分55秒"
+      },
+      {
+        "runner_name": "小泉樹",
+        "record": "1時間07分57秒"
+      },
+      {
+        "runner_name": "矢原倖瑛",
+        "record": "1時間03分39秒"
+      },
+      {
+        "runner_name": "花岡慶次",
+        "record": "1時間04分11秒"
+      },
+      {
+        "runner_name": "野田晶斗",
+        "record": "1時間12分43秒"
+      },
+      {
+        "runner_name": "湯田陽平兵",
+        "record": "59分51秒"
+      },
+      {
+        "runner_name": "宮岡幸大",
+        "record": "1時間03分00秒"
+      },
+      {
+        "runner_name": "安淫駿空",
+        "record": "1時間06分06秒"
+      },
+      {
+        "runner_name": "清水郁杜",
+        "record": "1時間10分20秒"
+      },
+      {
+        "runner_name": "行天陽虹",
+        "record": "1時間12分34秒"
+      }
+    ]
+  },
+  {
+    "university": "日本大学",
+    "runners": [
+      {
+        "runner_name": "安藤風羽",
+        "record": "1時間03分17秒"
+      },
+      {
+        "runner_name": "キップケメイ",
+        "record": "1時間07分31秒"
+      },
+      {
+        "runner_name": "冨田悠最",
+        "record": "1時間05分00秒"
+      },
+      {
+        "runner_name": "大仲竜平",
+        "record": "1時間04分13秒"
+      },
+      {
+        "runner_name": "鈴木孔士",
+        "record": "1時間13分03秒"
+      },
+      {
+        "runner_name": "山口月曜",
+        "record": "1時間00分50秒"
+      },
+      {
+        "runner_name": "長谷川豊樹",
+        "record": "1時間07分12秒"
+      },
+      {
+        "runner_name": "大橋優",
+        "record": "1時間07分13秒"
+      },
+      {
+        "runner_name": "小路朔琉",
+        "record": "1時間12分17秒"
+      },
+      {
+        "runner_name": "山口彰大",
+        "record": "1時間11分14秒"
+      }
+    ]
+  },
+  {
+    "university": "神奈川大学",
+    "runners": [
+      {
+        "runner_name": "大岩蓮",
+        "record": "1時間03分51秒"
+      },
+      {
+        "runner_name": "宮本陽叶",
+        "record": "1時間08分29秒"
+      },
+      {
+        "runner_name": "酒井健成",
+        "record": "1時間03分51秒"
+      },
+      {
+        "runner_name": "近藤大智",
+        "record": "1時間04分21秒"
+      },
+      {
+        "runner_name": "三原涼雅",
+        "record": "1時間13分07秒"
+      },
+      {
+        "runner_name": "上田航大",
+        "record": "58分49秒"
+      },
+      {
+        "runner_name": "新妻玲旺",
+        "record": "1時間05分23秒"
+      },
+      {
+        "runner_name": "西坂昂也",
+        "record": "1時間06分26秒"
+      },
+      {
+        "runner_name": "志食隆希",
+        "record": "1時間10分07秒"
+      },
+      {
+        "runner_name": "滝本朗史",
+        "record": "1時間13分04秒"
+      }
+    ]
+  },
+  {
+    "university": "大東文化大学",
+    "runners": [
+      {
+        "runner_name": "大償還真",
+        "record": "1時間02分49秒"
+      },
+      {
+        "runner_name": "棟方一楽",
+        "record": "1時間08分29秒"
+      },
+      {
+        "runner_name": "入演輝大",
+        "record": "1時間03分06秒"
+      },
+      {
+        "runner_name": "西代雄豪",
+        "record": "1時間03分51秒"
+      },
+      {
+        "runner_name": "中津真大",
+        "record": "1時間15分29秒"
+      },
+      {
+        "runner_name": "小田著長ヨ区",
+        "record": "59分37秒"
+      },
+      {
+        "runner_name": "宮倉騎士",
+        "record": "1時間06分49秒"
+      },
+      {
+        "runner_name": "西川千青",
+        "record": "1時間06分42秒"
+      },
+      {
+        "runner_name": "大谷章紘",
+        "record": "1時間12分03秒"
+      },
+      {
+        "runner_name": "庄司瑞輝",
+        "record": "1時間11分43秒"
+      }
+    ]
+  },
+  {
+    "university": "専修大学",
+    "runners": [
+      {
+        "runner_name": "新井友格",
+        "record": "1時間03分32秒"
+      },
+      {
+        "runner_name": "マイナ",
+        "record": "1時間07分29秒"
+      },
+      {
+        "runner_name": "上山詩樹",
+        "record": "1時間03分10秒"
+      },
+      {
+        "runner_name": "手塚太一",
+        "record": "1時間04分51秒"
+      },
+      {
+        "runner_name": "田口萩大",
+        "record": "1時間17分48秒"
+      },
+      {
+        "runner_name": "丹柊太郎",
+        "record": "59分36秒"
+      },
+      {
+        "runner_name": "具志堅一斗",
+        "record": "1時間04分26秒"
+      },
+      {
+        "runner_name": "大塚知宏",
+        "record": "1時間06分15秒"
+      },
+      {
+        "runner_name": "大田和一斗",
+        "record": "1時間10分36秒"
+      },
+      {
+        "runner_name": "藁科健斗",
+        "record": "1時間11分10秒"
+      }
+    ]
+  },
+  {
+    "university": "関東学生連合",
+    "runners": [
+      {
+        "runner_name": "片川祐大（亜細亜大学）",
+        "record": "1時間02分56秒"
+      },
+      {
+        "runner_name": "森川蒼太（流通経済大学）",
+        "record": "1時間08分58秒"
+      },
+      {
+        "runner_name": "小山洋生（筑波大学）",
+        "record": "1時間02分55秒"
+      },
+      {
+        "runner_name": "溝上稜斗（明治大学）",
+        "record": "1時間03分54秒"
+      },
+      {
+        "runner_name": "佐藤我卵人（駿河台大学）",
+        "record": "1時間14分22秒"
+      },
+      {
+        "runner_name": "横田星那（国士舘大学）",
+        "record": "59分38秒"
+      },
+      {
+        "runner_name": "栗原舜（明治学院大学）",
+        "record": "1時間04分36秒"
+      },
+      {
+        "runner_name": "秋吉拓真（東京大学）",
+        "record": "1時間04分45秒"
+      },
+      {
+        "runner_name": "古川大晃（東京大学大学院）",
+        "record": "1時間11分52秒"
+      },
+      {
+        "runner_name": "福本陽樹（武蔵野学院大学）",
+        "record": "1時間12分57秒"
+      }
+    ]
+  },
+  {
+    "university": "國學院大學",
+    "runners": [
+      {
+        "runner_name": "野中恒亨",
+        "record": "1時間02分47秒"
+      },
+      {
+        "runner_name": "平林清澄",
+        "record": "1時間06分38秒"
+      },
+      {
+        "runner_name": "山本歩夢",
+        "record": "1時間01分54秒"
+      },
+      {
+        "runner_name": "青木瑠郁",
+        "record": "1時間01分09秒"
+      },
+      {
+        "runner_name": "高山豪起",
+        "record": "1時間12分58秒"
+      },
+      {
+        "runner_name": "嘉数純平",
+        "record": "59分41秒"
+      },
+      {
+        "runner_name": "辻原輝",
+        "record": "1時間02分21秒"
+      },
+      {
+        "runner_name": "佐藤快成",
+        "record": "1時間04分46秒"
+      },
+      {
+        "runner_name": "上原琉朔",
+        "record": "1時間09分08秒"
+      },
+      {
+        "runner_name": "吉田蔵之介",
+        "record": "1時間09分25秒"
+      }
+    ]
+  },
+  {
+    "university": "早稲田大学",
+    "runners": [
+      {
+        "runner_name": "間瀬田純平",
+        "record": "1時間02分43秒"
+      },
+      {
+        "runner_name": "山口智規",
+        "record": "1時間07分01秒"
+      },
+      {
+        "runner_name": "山口竣平",
+        "record": "1時間01分15秒"
+      },
+      {
+        "runner_name": "長屋匡起",
+        "record": "1時間02分00秒"
+      },
+      {
+        "runner_name": "工藤慎作",
+        "record": "1時間09分31秒"
+      },
+      {
+        "runner_name": "山崎－吹",
+        "record": "58分45秒"
+      },
+      {
+        "runner_name": "伊藤大志",
+        "record": "1時間03分36秒"
+      },
+      {
+        "runner_name": "伊福陽太",
+        "record": "1時間05分54秒"
+      },
+      {
+        "runner_name": "石塚陽士",
+        "record": "1時間10分36秒"
+      },
+      {
+        "runner_name": "菅野雄大",
+        "record": "1時間09分36秒"
+      }
+    ]
+  }
+]
