@@ -69,7 +69,6 @@ class HakoneEkidenViewer:
         self.last_update_time = 0  # Last update time in seconds
         self.is_outward = True  # True for outward (1-5), False for return (6-10)
         self.team_positions = []  # List of team positions
-        self.team_rankings = []   # List of team rankings
         self.max_time = 0         # Maximum time in seconds
         
         # Process data
@@ -114,7 +113,7 @@ class HakoneEkidenViewer:
         
         for team in self.data:
             outward_time = sum(runner["seconds"] for runner in team["runners"][:5])
-            return_time = sum(runner["seconds"] for runner in team["runners"][5:])
+            return_time = sum(runner["seconds"] for runner in team["runners"][5:]) + team["delay"]
             outward_times.append(outward_time)
             return_times.append(return_time)
         
@@ -141,17 +140,21 @@ class HakoneEkidenViewer:
     
     def update_rankings(self):
         # Sort teams by distance
-        sorted_positions = sorted(self.team_positions, key=lambda x: x["distance"], reverse=True)
-        self.team_rankings = sorted_positions
+        self.team_positions = sorted(self.team_positions, key=lambda x: x["distance"], reverse=True)
         
         # Update target y positions for animation
-        for i, team in enumerate(self.team_rankings):
+        for i, team in enumerate(self.team_positions):
             team["target_y"] = 130 + i * 20
     
     def calculate_positions(self, time):
         # Calculate team positions at the given time
         for team_idx, team in enumerate(self.data):
-            position = self.team_positions[team_idx]
+            for pos in self.team_positions:
+                if pos["team_idx"] == team_idx:
+                    position = pos
+                    break
+            # position = self.team_positions[team_idx]
+            assert pos['university'] == team['university']
             
             # Determine which sections to consider based on outward/return
             start_section = 0 if self.is_outward else 5
@@ -333,7 +336,7 @@ class HakoneEkidenViewer:
         pyxel.text(10, 110, "ORDER", 0)
         
         # Draw team rankings with animation
-        for i, team in enumerate(self.team_rankings):
+        for i, team in enumerate(self.team_positions):
             y = team["display_y"]
             university = team["university"]
             color = team["color"]
@@ -347,7 +350,7 @@ class HakoneEkidenViewer:
             section = team["section"]
             current_section = section + 1
             runner_name = self.data[team["team_idx"]]["runners"][section]["runner_name"]
-            pyxel.text(150, y + 5, f"{current_section}区: {runner_name}", 0)
+            pyxel.text(150, y + 5, f"{current_section}: {runner_name}", 0)
     
     def draw_course(self):
         # Draw course in the right pane
@@ -369,7 +372,7 @@ class HakoneEkidenViewer:
                 pyxel.text(x + 10, 120, f"{distance}km", 0)
         
         # Draw runners
-        for position in self.team_positions:
+        for i, position in enumerate(self.team_positions):
             # Calculate x position based on distance
             journey_distance = OUTWARD_DISTANCE if self.is_outward else RETURN_DISTANCE
             x_ratio = position["distance"] / journey_distance
@@ -377,14 +380,16 @@ class HakoneEkidenViewer:
             
             # Calculate y position (stagger runners vertically)
             team_idx = position["team_idx"]
-            y = 150 + (team_idx % 10) * 30
+            # y = 150 + team_idx * 10
+            y = position["display_y"]
             
             # Draw runner
             color = position["color"]
             pyxel.circ(x, y, 5, color[0])
             
             # Draw team number and university name
-            pyxel.text(x - 2, y - 10, str(team_idx + 1), color[1])
+            pyxel.text(x - 2, y - 10, position['university'], color[1])
+            # pyxel.text(x - 2, y - 10, str(team_idx + 1), color[1])
             
             # Draw current section and runner name
             section = position["section"]
@@ -401,16 +406,16 @@ class HakoneEkidenViewer:
                 pyxel.text(x + 15, y - 10, f"{university}", 0)
                 pyxel.text(x + 15, y, f"{current_section}KU: {runner_name}", 0)
                 pyxel.text(x + 15, y + 10, f"RECORD: {record}", 0)
-            else:
-                pyxel.text(x - 2, y + 8, f"{current_section}KU", 0)
+            # else:
+            #     pyxel.text(x - 2, y + 8, str(position['distance']), 0)
         
         # Draw legend
-        pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 110, "操作方法:", 0)
-        pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 125, "- 再生/停止ボタン: アニメーションを再生/停止", 0)
-        pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 140, "- 往路/復路ボタン: 往路(1-5区)と復路(6-10区)を切り替え", 0)
-        pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 155, "- 速度調整: +/-ボタンで再生速度を変更", 0)
-        pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 170, "- タイムバー: クリックして時間を変更", 0)
-        pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 185, "- ランナー: マウスオーバーで詳細表示", 0)
+        # pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 110, "操作方法:", 0)
+        # pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 125, "- 再生/停止ボタン: アニメーションを再生/停止", 0)
+        # pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 140, "- 往路/復路ボタン: 往路(1-5区)と復路(6-10区)を切り替え", 0)
+        # pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 155, "- 速度調整: +/-ボタンで再生速度を変更", 0)
+        # pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 170, "- タイムバー: クリックして時間を変更", 0)
+        # pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 185, "- ランナー: マウスオーバーで詳細表示", 0)
 
 # Run the application
 if __name__ == "__main__":
