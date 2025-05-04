@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 # Constants
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-TIME_SCALE_OPTIONS = [15, 30, 60, 120, 240]  # Speed options (x real speed)
+TIME_SCALE_OPTIONS = [2, 8, 10, 12, 18]  # Speed options (x real speed)
 TIME_SCALE_INDEX = 2  # Default to 60x (index 2 in the options)
 TIME_SCALE = TIME_SCALE_OPTIONS[TIME_SCALE_INDEX]  # Current time scale
 LEFT_PANE_WIDTH = 300
@@ -52,6 +52,19 @@ SECTION_DISTANCES = [
     23.0,  # Section 10
 ]
 
+KURIAGE_SECONDS = [
+    600,
+    600,
+    900,
+    900,
+    9999,
+    1200,
+    1200,
+    1200,
+    1200,
+    1200
+]
+
 # Total distance for outward and return journeys
 OUTWARD_DISTANCE = sum(SECTION_DISTANCES[:5])
 RETURN_DISTANCE = sum(SECTION_DISTANCES[5:])
@@ -83,6 +96,8 @@ class HakoneEkidenViewer:
     
     def process_data(self):
         # Convert time strings to seconds and calculate speeds
+        for i in range(len(self.data)):
+            self.data[i]["delay"] = min(600, self.data[i]["delay"])
         for team in self.data:
             for i, runner in enumerate(team["runners"]):
                 # Parse time string (e.g., "1時間02分51秒")
@@ -99,6 +114,9 @@ class HakoneEkidenViewer:
                 # Calculate speed (km/s)
                 section_distance = SECTION_DISTANCES[i]
                 runner["speed"] = section_distance / total_seconds
+        
+        # Caluculate 
+        self.calulate_kuriage_time()
         
         # Calculate maximum time
         self.calculate_max_time()
@@ -121,6 +139,33 @@ class HakoneEkidenViewer:
         self.max_return_time = max(return_times)
         self.max_time = max(self.max_outward_time, self.max_return_time)
     
+    def calulate_kuriage_time(self):
+        # Calculate minimum time from top at the start of each section
+        self.kuriage_seconds = []
+        for i in range(10):
+            min_time = float('inf')
+            for team in self.data:
+                if i < 5:
+                    time = sum(runner["seconds"] for runner in team["runners"][:i+1])
+                else:
+                    time = sum(runner["seconds"] for runner in team["runners"][5:i+1]) + team["delay"]
+                if time < min_time:
+                    min_time = time
+            self.kuriage_seconds.append(min_time + KURIAGE_SECONDS[i])
+
+        # update runner['seconds'] to be the time from the start of the section
+        for team in self.data:
+            for i, runner in enumerate(team["runners"][:-1]):
+                runner['kuriage'] = 0
+                if i < 5:
+                    whole_time = sum(runner["seconds"] - runner['kuriage'] for runner in team["runners"][:i+1])
+                    if whole_time > self.kuriage_seconds[i]:
+                        runner["kuriage"] = whole_time - self.kuriage_seconds[i]
+                else:
+                    whole_time = sum(runner["seconds"] for runner in team["runners"][5:i+1]) + team["delay"]
+                    if whole_time > self.kuriage_seconds[i]:
+                        runner["kuriage"] = whole_time - self.kuriage_seconds[i]
+
     def initialize_positions(self):
         # Initialize team positions at time 0
         self.team_positions = []
@@ -176,7 +221,7 @@ class HakoneEkidenViewer:
                 runner = team["runners"][current_section]
                 section_time = runner["seconds"]
                 
-                if remaining_time >= section_time:
+                if remaining_time >= section_time - runner.get('kuriage', 0):
                     # Runner completed the section
                     distance += SECTION_DISTANCES[current_section]
                     remaining_time -= section_time
@@ -239,7 +284,7 @@ class HakoneEkidenViewer:
             now = datetime.now().timestamp()
             if self.last_update_time == 0:
                 self.last_update_time = now
-            self.current_time += 10 #(now - self.last_update_time) * TIME_SCALE
+            self.current_time += TIME_SCALE
             max_time = self.max_outward_time if self.is_outward else self.max_return_time
             
             # Stop at the end
