@@ -66,6 +66,7 @@ class HakoneEkidenViewer:
         # Initialize variables
         self.is_playing = False
         self.current_time = 0  # Time in seconds
+        self.last_update_time = 0  # Last update time in seconds
         self.is_outward = True  # True for outward (1-5), False for return (6-10)
         self.team_positions = []  # List of team positions
         self.team_rankings = []   # List of team rankings
@@ -163,6 +164,8 @@ class HakoneEkidenViewer:
             
             # Calculate distance covered
             remaining_time = time
+            if not self.is_outward:
+                remaining_time = max(0, remaining_time - self.data[team_idx]["delay"])
             distance = 0
             current_section = start_section
             
@@ -229,7 +232,11 @@ class HakoneEkidenViewer:
         
         # Update time if playing
         if self.is_playing:
-            self.current_time += pyxel.dt * TIME_SCALE
+            # Update time
+            now = datetime.now().timestamp()
+            if self.last_update_time == 0:
+                self.last_update_time = now
+            self.current_time += 10 #(now - self.last_update_time) * TIME_SCALE
             max_time = self.max_outward_time if self.is_outward else self.max_return_time
             
             # Stop at the end
@@ -239,6 +246,8 @@ class HakoneEkidenViewer:
             
             # Calculate positions
             self.calculate_positions(self.current_time)
+        else:
+            self.last_update_time = 0
         
         # Animate ranking positions
         for team in self.team_positions:
@@ -268,18 +277,18 @@ class HakoneEkidenViewer:
             # Pause icon (two vertical bars)
             pyxel.rect(20, 15, 5, 20, 7)
             pyxel.rect(30, 15, 5, 20, 7)
-            pyxel.text(45, 20, "停止", 7)
+            pyxel.text(45, 20, "STOP", 7)
         else:
             # Play icon (triangle)
             for i in range(15):
                 pyxel.line(20, 25 - i, 20, 25 + i, 7)
                 pyxel.line(20, 25 - i, 20 + i, 25, 7)
                 pyxel.line(20, 25 + i, 20 + i, 25, 7)
-            pyxel.text(45, 20, "再生", 7)
+            pyxel.text(45, 20, "PLAY", 7)
         
         # Outward/Return toggle button
         pyxel.rect(120, 10, 150, BUTTON_HEIGHT, 12)
-        journey_text = "往路 (1-5区)" if self.is_outward else "復路 (6-10区)"
+        journey_text = "OURO (1-5)" if self.is_outward else "HUKURO (6-10)"
         pyxel.text(130, 20, journey_text, 7)
         
         # Speed control buttons
@@ -287,7 +296,7 @@ class HakoneEkidenViewer:
         pyxel.text(290, 20, "-", 7)
         
         pyxel.rect(315, 10, 60, BUTTON_HEIGHT, 11)
-        pyxel.text(320, 20, f"{TIME_SCALE}x速度", 7)
+        pyxel.text(320, 20, f"{TIME_SCALE}x SPEED", 7)
         
         pyxel.rect(380, 10, 30, BUTTON_HEIGHT, 3)
         pyxel.text(390, 20, "+", 7)
@@ -295,7 +304,7 @@ class HakoneEkidenViewer:
         # Current time display
         hours, remainder = divmod(int(self.current_time), 3600)
         minutes, seconds = divmod(remainder, 60)
-        time_str = f"経過時間: {hours:02d}:{minutes:02d}:{seconds:02d}"
+        time_str = f"TIME: {hours:02d}:{minutes:02d}:{seconds:02d}"
         pyxel.text(430, 20, time_str, 0)
     
     def draw_time_bar(self):
@@ -321,7 +330,7 @@ class HakoneEkidenViewer:
     def draw_rankings(self):
         # Draw rankings in the left pane
         pyxel.rect(0, 100, LEFT_PANE_WIDTH, RANKING_HEIGHT, 7)
-        pyxel.text(10, 110, "順位表", 0)
+        pyxel.text(10, 110, "ORDER", 0)
         
         # Draw team rankings with animation
         for i, team in enumerate(self.team_rankings):
@@ -353,7 +362,7 @@ class HakoneEkidenViewer:
             # Label sections
             if i < 5:
                 section_num = i + 1 if self.is_outward else i + 6
-                pyxel.text(x + 10, 110, f"{section_num}区", 0)
+                pyxel.text(x + 10, 110, f"{section_num}KU", 0)
                 
                 # Show section distance
                 distance = SECTION_DISTANCES[section_num - 1]
@@ -390,10 +399,10 @@ class HakoneEkidenViewer:
                 # Draw info box
                 pyxel.rect(x + 10, y - 15, 150, 40, 13)
                 pyxel.text(x + 15, y - 10, f"{university}", 0)
-                pyxel.text(x + 15, y, f"{current_section}区: {runner_name}", 0)
-                pyxel.text(x + 15, y + 10, f"記録: {record}", 0)
+                pyxel.text(x + 15, y, f"{current_section}KU: {runner_name}", 0)
+                pyxel.text(x + 15, y + 10, f"RECORD: {record}", 0)
             else:
-                pyxel.text(x - 2, y + 8, f"{current_section}区", 0)
+                pyxel.text(x - 2, y + 8, f"{current_section}KU", 0)
         
         # Draw legend
         pyxel.text(LEFT_PANE_WIDTH + 10, COURSE_HEIGHT + 110, "操作方法:", 0)
